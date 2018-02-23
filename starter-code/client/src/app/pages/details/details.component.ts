@@ -10,6 +10,7 @@ import { ActivatedRoute } from '@angular/router';
 export class DetailsComponent implements OnInit {
   food: Object;
   foodId: number;
+  showInput: boolean = false;
   constructor(private foodsservice: FoodsService, private tude: ActivatedRoute) { }
 
   ngOnInit() {
@@ -21,8 +22,10 @@ export class DetailsComponent implements OnInit {
     .then((paquita) => {
       this.food = paquita;
     })
+  }
 
-    
+  showForm(){
+    this.showInput = true;
   }
 
 }

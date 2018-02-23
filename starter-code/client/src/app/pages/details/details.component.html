@@ -6,4 +6,11 @@
   <p>{{ food.name }}</p>
   <p>{{ food.description }}</p>
   <img src ="{{ food.image }}">
+  <button (click)="showForm()">Add ingredient</button>
+</div>
+
+<div *ngIf = "showInput">
+  <form >
+    <input type="text" name="" id="" placeholder = "ingredient">
+  </form>
 </div>

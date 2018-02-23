@@ -9,10 +9,13 @@ import { FoodsService } from "./services/foods.service";
 import { AppComponent } from './app.component';
 import { FoodsPageComponent } from './pages/foods-page/foods-page.component';
 import { DetailsComponent } from './pages/details/details.component';
+import { IngredientsComponent } from './components/ingredients/ingredients.component';
 
 const routes: Routes = [
   { path: 'foods', component: FoodsPageComponent },
-  { path: 'foods/:id', component: DetailsComponent }
+  { path: 'foods/:id', component: DetailsComponent },
+  { path: 'ingredients', component: IngredientsComponent }
+
 
 ]
 
@@ -21,6 +24,7 @@ const routes: Routes = [
     AppComponent,
     FoodsPageComponent,
     DetailsComponent,
+    IngredientsComponent,
   ],
   imports: [
     BrowserModule,
