@@ -15,4 +15,9 @@ BASE_URL: string = 'http://localhost:3000';
     .then((result: Response) => result.json())
   }
 
+  getFood(paquitaId): Promise<any> {
+    return this.http.get(`${this.BASE_URL}/api/dishes/${paquitaId}`)
+      .toPromise()
+      .then((result: Response) => result.json())
+  }
 }
